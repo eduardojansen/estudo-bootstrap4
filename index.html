@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <title>Estudo Bootstrap 4</title>
+    <style>
+        .destaque {
+            background-color: yellow;
+            border: solid 1px black;
+        }
+
+        .linha-maior {
+            height: 150px;
+            background-color: lightgray;
+        }
+
+        .coluna-normal {
+            height: 50px;
+        }
+
+        .linha-clara {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<!-- 
+    Breakpoints // Definições padrão
+        - xs (extra-small devices) - < 576px
+        - sm (small devices) - 576px <= viewport =< 767px
+        - md (medium devices) - 768px <= vwp <= 991px
+        - lg (large devices) - 992px <= vwp <=1999px
+        - xg (extra-large devices) - vwp => 1200px
+ -->
+
+<body>
+    <div class="container destaque">
+        <h2>Grid System</h2>
+        <div class="row">
+            <div class="col destaque">
+                Part 1
+            </div>
+            <div class="col destaque">
+                Part 2
+            </div>
+            <div class="col destaque">
+                Part 3
+            </div>
+            <div class="col destaque">
+                Part 4
+            </div>
+            <div class="col destaque">
+                Part 5
+            </div>
+        </div>
+        <div class="row">
+            <div class="col destaque">
+                Part 1
+            </div>
+            <div class="col destaque">
+                Part 2
+            </div>
+            <div class="col destaque">
+                Part 3
+            </div>
+        </div>
+        <!-- Quando a tela for menor que o valor definido para sm. As colunas ficarão com o tamanho 12s -->
+        <div class="row">
+            <div class="col-md-3 col-sm-12 destaque">
+                Part 1
+            </div>
+            <div class="col-md-6 col-sm-12 destaque">
+                Part 2
+            </div>
+            <div class="col-md-3 col-sm-12 destaque">
+                Part 3
+            </div>
+        </div>
+        <div class="row destaque">
+            <div class="col-md-3 col-sm-4 col-12 destaque">
+                Part 1
+            </div>
+            <div class="col-md-6 col-sm-4 col-12 destaque">
+                Part 2
+            </div>
+            <div class="col-md-3 col-sm-4 col-12 destaque">
+                Part 3
+            </div>
+        </div>
+        <h2>Posicionamento Vertical</h2>
+        <!-- 
+            Alinhando itens da row verticalmente
+            align-items-start: força que o conteúdo fiquem alinhados na parte superior
+            align-items-center: alinhando de forma centralizada
+            align-items-end: alinhando os itens no final
+        -->
+        <div class="row destaque linha-maior align-items-start">
+            <div class="col destaque coluna-normal">
+                Parte 01
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 02
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 03
+            </div>
+        </div>
+        <div class="row destaque linha-maior align-items-center">
+            <div class="col destaque coluna-normal">
+                Parte 01
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 02
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 03
+            </div>
+        </div>
+        <div class="row destaque linha-maior align-items-end">
+            <div class="col destaque coluna-normal">
+                Parte 01
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 02
+            </div>
+            <div class="col destaque coluna-normal">
+                Parte 03
+            </div>
+        </div>
+
+        <!-- Alinhando individualmente uma coluna verticalmente-->
+        <div class="row destaque linha-maior">
+            <div class="col destaque coluna-normal align-self-start">
+                Parte 01
+            </div>
+            <div class="col destaque coluna-normal align-self-center">
+                Parte 02
+            </div>
+            <div class="col destaque coluna-normal align-self-end">
+                Parte 03
+            </div>
+        </div>
+
+        <!-- 
+            Alinhando itens da row verticalmente 
+            justify-content-start -> padrão alinha a esquerda,
+            justify-content-center -> alinha centralizando
+            justify-content-end -> alinha a direita
+            justify-content-around -> espalha os itens na linha com espaçamento igual entre eles e um específico nas laterias
+            justify-content-between -> espalha os itens na linha com espaçamento igual entre eles colando nas laterais
+        -->
+        <h2>Posicionamento Horizontal</h2>
+        <div class="row destaque justify-content-start linha-clara">
+            <div class="col-3 destaque">
+                Parte 01
+            </div>
+            <div class="col-3 destaque">
+                Parte 02
+            </div>
+        </div>
+        <div class="row destaque justify-content-center linha-clara">
+            <div class="col-3 destaque">
+                Parte 01
+            </div>
+            <div class="col-3 destaque">
+                Parte 02
+            </div>
+        </div>
+        <div class="row destaque justify-content-end linha-clara">
+            <div class="col-3 destaque">
+                Parte 01
+            </div>
+            <div class="col-3 destaque">
+                Parte 02
+            </div>
+        </div>
+        <div class="row destaque justify-content-around linha-clara">
+            <div class="col-3 destaque">
+                Parte 01
+            </div>
+            <div class="col-3 destaque">
+                Parte 02
+            </div>
+            <div class="col-3 destaque">
+                Parte 03
+            </div>
+        </div>
+        <div class="row destaque justify-content-between linha-clara">
+            <div class="col-3 destaque">
+                Parte 01
+            </div>
+            <div class="col-3 destaque">
+                Parte 02
+            </div>
+            <div class="col-3 destaque">
+                Parte 03
+            </div>
+        </div>
+
+        <!-- 
+            Ordenar itens
+         -->
+        <h2>Ordenação</h2>
+        <div class="row destaque">
+            <div class="col destaque order-12">
+                Primeiro
+            </div>
+            <div class="col destaque">
+                Segundo
+            </div>
+            <div class="col destaque">
+                Terceiro
+            </div>
+        </div>
+        <div class="row destaque">
+            <div class="col destaque order-last">
+                Primeiro
+            </div>
+            <div class="col destaque">
+                Segundo
+            </div>
+            <div class="col destaque order-first">
+                Terceiro
+            </div>
+        </div>
+
+        <h2>Offset</h2>
+        <div class="row destaque">
+            <div class="col-3 destaque">
+                Primeiro
+            </div>
+            <!-- Pulando duas colunas de onde minha columna seria renderizad naturalmente -->
+            <div class="col-3 offset-2 destaque">
+                Segundo
+            </div>
+        </div>
+        <div class="row destaque">
+            <div class="col-3 offset-4 destaque">
+                Primeiro
+            </div>
+            <div class="col-3 offset-2 destaque">
+                Segundo
+            </div>
+        </div>
+    </div>
+    <!-- Scripts Javascrip     -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
